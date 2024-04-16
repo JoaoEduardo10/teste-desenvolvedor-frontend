@@ -16,6 +16,7 @@ export const PageNumberButtons = ({
       {Array.from({ length: totalPages }, (_, i) => (
         <li key={i + 1} onClick={() => onPageClick(i + 1)}>
           <button
+            aria-label="paginate button"
             role="button"
             className={`flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 ${
               currentPage === i + 1

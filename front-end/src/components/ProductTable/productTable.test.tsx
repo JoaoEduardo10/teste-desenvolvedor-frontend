@@ -8,7 +8,7 @@ describe('<Producttable />', () => {
   it('should render the medicines', () => {
     render(<ProductTable medicines={dataMock} />);
 
-    expect(screen.getAllByLabelText('medicines').length).toBe(2);
+    expect(screen.getAllByLabelText('medicines').length).toBe(23);
     expect(screen.queryByLabelText('not medicines')).not.toBeInTheDocument();
   });
 
