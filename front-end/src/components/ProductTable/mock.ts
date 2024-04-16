@@ -28,7 +28,7 @@ const dataMock = [
   {
     id: '9d0594ea-b9ee-42b6-b8e6-53a43eaf50bf',
     name: 'ACEZO',
-    published_at: '2022-11-11T13:52:44.000Z',
+    published_at: '2020-11-11T13:52:44.000Z',
     company: 'CRISTÁLIA PRODUTOS QUÍMICOS FARMACÊUTICOS LTDA.',
     documents: [
       {
