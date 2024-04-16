@@ -1,5 +1,6 @@
 import { ApiResponse } from '@/utils/api';
 import { showDate } from '@/utils/showDate';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { FaFileDownload } from 'react-icons/fa';
 import { LuArrowDownUp } from 'react-icons/lu';
@@ -64,7 +65,13 @@ const ProductTable = ({ medicines }: ProductTableProps) => {
                   {new Date(medicine.published_at).toLocaleDateString()}
                 </td>
                 <td className="px-6 py-4 cursor-pointer">
-                  <FaFileDownload className="text-cente block w-8/12 text-2xl text-red-600" />
+                  <Link
+                    href={medicine.documents[0].url}
+                    rel="external"
+                    target="_blank"
+                  >
+                    <FaFileDownload className="text-cente block w-8/12 text-2xl text-red-600" />
+                  </Link>
                 </td>
               </tr>
             ))

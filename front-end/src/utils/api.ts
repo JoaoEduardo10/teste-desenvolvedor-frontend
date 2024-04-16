@@ -27,7 +27,7 @@ export interface ApiResponse {
 
 const getAllMedicines = async () => {
   try {
-    const response = await axiosBase.get('/');
+    const response = await axiosBase.get('/data');
 
     return response.data as ApiResponse['data'];
   } catch (error: any) {
