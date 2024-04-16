@@ -27,21 +27,21 @@ const ProductTable = ({ medicines }: ProductTableProps) => {
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="px-6 py-3 phone:text-xl">
               Nome do medicamento
             </th>
             <th
               aria-label="taggle show date"
               onClick={handleOrderDate}
               scope="col"
-              className="px-6 py-3 flex items-center gap-1 cursor-pointer"
+              className="px-6 py-3 flex items-center gap-1 cursor-pointer phone:hidden"
             >
               <div>
                 <LuArrowDownUp className="text-xl" />
               </div>
               <span>data</span>
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="px-6 py-3 phone:hidden">
               Download
             </th>
           </tr>
@@ -57,14 +57,17 @@ const ProductTable = ({ medicines }: ProductTableProps) => {
                 <th
                   aria-label="medicine name"
                   scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white phone:text-xs"
                 >
                   {medicine.name}
                 </th>
-                <td aria-label="medicine data" className="px-6 py-4">
+                <td
+                  aria-label="medicine data"
+                  className="px-6 py-4 phone:hidden"
+                >
                   {new Date(medicine.published_at).toLocaleDateString()}
                 </td>
-                <td className="px-6 py-4 cursor-pointer">
+                <td className="px-6 py-4 cursor-pointer phone:hidden ">
                   <Link
                     href={medicine.documents[0].url}
                     rel="external"

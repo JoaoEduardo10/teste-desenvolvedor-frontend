@@ -26,7 +26,9 @@ export const BularioConteiner = () => {
     };
 
     request();
+  }, []);
 
+  useEffect(() => {
     const filtered = medicines.filter((medicine) => {
       return (
         medicine.name.toLowerCase().includes(search.toLowerCase()) ||
